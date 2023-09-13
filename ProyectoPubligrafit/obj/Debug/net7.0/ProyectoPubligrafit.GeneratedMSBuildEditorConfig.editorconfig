@@ -1,0 +1,141 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ProyectoPubligrafit
+build_property.RootNamespace = ProyectoPubligrafit
+build_property.ProjectDir = C:\Users\emi--\source\repos\PubligrafitNet\ProyectoPubligrafit\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\emi--\source\repos\PubligrafitNet\ProyectoPubligrafit
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/emi--/source/repos/PubligrafitNet/ProyectoPubligrafit/Views/Cliente/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emi--/source/repos/PubligrafitNet/ProyectoPubligrafit/Views/Cliente/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emi--/source/repos/PubligrafitNet/ProyectoPubligrafit/Views/Cliente/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emi--/source/repos/PubligrafitNet/ProyectoPubligrafit/Views/Cliente/Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxTZWFyY2guY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emi--/source/repos/PubligrafitNet/ProyectoPubligrafit/Views/Compras/CreateA.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhc1xDcmVhdGVBLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emi--/source/repos/PubligrafitNet/ProyectoPubligrafit/Views/Compras/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emi--/source/repos/PubligrafitNet/ProyectoPubligrafit/Views/Compras/Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhc1xTZWFyY2guY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emi--/source/repos/PubligrafitNet/ProyectoPubligrafit/Views/Ficha_Tecnica/CreateA.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmljaGFfVGVjbmljYVxDcmVhdGVBLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emi--/source/repos/PubligrafitNet/ProyectoPubligrafit/Views/Ficha_Tecnica/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmljaGFfVGVjbmljYVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emi--/source/repos/PubligrafitNet/ProyectoPubligrafit/Views/Ficha_Tecnica/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmljaGFfVGVjbmljYVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emi--/source/repos/PubligrafitNet/ProyectoPubligrafit/Views/Ficha_Tecnica/Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmljaGFfVGVjbmljYVxTZWFyY2guY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emi--/source/repos/PubligrafitNet/ProyectoPubligrafit/Views/Home/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emi--/source/repos/PubligrafitNet/ProyectoPubligrafit/Views/Home/NoLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOb0xvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emi--/source/repos/PubligrafitNet/ProyectoPubligrafit/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emi--/source/repos/PubligrafitNet/ProyectoPubligrafit/Views/Insumos/CreateA.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdW1vc1xDcmVhdGVBLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emi--/source/repos/PubligrafitNet/ProyectoPubligrafit/Views/Insumos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdW1vc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emi--/source/repos/PubligrafitNet/ProyectoPubligrafit/Views/Insumos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdW1vc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emi--/source/repos/PubligrafitNet/ProyectoPubligrafit/Views/Insumos/Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdW1vc1xTZWFyY2guY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emi--/source/repos/PubligrafitNet/ProyectoPubligrafit/Views/Rol/CreateA.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sXENyZWF0ZUEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emi--/source/repos/PubligrafitNet/ProyectoPubligrafit/Views/Rol/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emi--/source/repos/PubligrafitNet/ProyectoPubligrafit/Views/Rol/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emi--/source/repos/PubligrafitNet/ProyectoPubligrafit/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emi--/source/repos/PubligrafitNet/ProyectoPubligrafit/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emi--/source/repos/PubligrafitNet/ProyectoPubligrafit/Views/Usuario/CreateA.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xDcmVhdGVBLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emi--/source/repos/PubligrafitNet/ProyectoPubligrafit/Views/Usuario/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emi--/source/repos/PubligrafitNet/ProyectoPubligrafit/Views/Usuario/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emi--/source/repos/PubligrafitNet/ProyectoPubligrafit/Views/Usuario/Listar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xMaXN0YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emi--/source/repos/PubligrafitNet/ProyectoPubligrafit/Views/Usuario/Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xTZWFyY2guY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emi--/source/repos/PubligrafitNet/ProyectoPubligrafit/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emi--/source/repos/PubligrafitNet/ProyectoPubligrafit/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emi--/source/repos/PubligrafitNet/ProyectoPubligrafit/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-6bfxyo7v4m

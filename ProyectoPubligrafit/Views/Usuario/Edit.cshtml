@@ -1,0 +1,104 @@
+﻿
+@model ProyectoPubligrafit.Models.Usuario
+@{
+    ViewData["Title"] = "Crear";
+}
+
+
+ <link rel="stylesheet" href="../../css/style.css">
+       <script src="../../validar/validarUR.js"></script>
+
+
+<div class="page-flex">
+
+  <div class="card">
+
+    <div class="card-body">
+
+   <form method="post" asp-action="Edit" id="pruebas">
+
+
+                 <input type="hidden" asp-for="id_usuario" />
+
+    <div class="text-center">
+    <img class="img-fluid ml-5" src="https://cdn-icons-png.flaticon.com/512/359/359858.png" alt="">
+  </div>
+
+    <div class="form-row">
+
+
+      <div class="col-xs-4">
+        <label asp-for="nombres" class="form-label">Nombres(*)</label>
+
+        <input type="text" asp-for="nombres" class="form-control" placeholder="Nombre" aria-label="Last name" id="nombre" >
+      </div>
+      <div class="col-xs-4">
+        <label asp-for="apellidos" class="form-label">Apellidos(*)</label>
+
+        <input type="text" asp-for="apellidos" class="form-control" placeholder="Apellidos" aria-label="First name" id="apellido" >
+      </div>
+
+
+     </div>
+
+     <div class="form-row">
+
+      <div class="col-xs-4">
+        <label asp-for="email" class="form-label">Correo electronico(*)</label>
+
+        <input type="text" asp-for="email" class="form-control" placeholder="Correo electronico" aria-label="First name" id="correo" >
+      </div>
+      <div class="col-xs-4">
+        <label asp-for="contrasena" class="form-label">Contraseña(*)</label>
+
+        <input type="text" asp-for="contrasena" class="form-control" placeholder="Contraseña" aria-label="Last name" id="contrasena" >
+      </div>
+     </div>
+
+     <div class="form-row">
+      <div class="col-xs-4" style="margin-left: 22%;">
+      <label for="inputEmail4" class="form-label" >Confirmar Contraseña(*)</label>
+
+      <input type="text" class="form-control"  placeholder="Confirmar Contraseña" aria-label="Last name" id="confirmar">
+     </div>
+     </div>
+
+     <div class="roles row" >
+      <select  id="" class="roles2"  asp-for="fk_rol2">
+
+
+        <option value="1">Administrador</option>
+        <option value="2">Empleado</option>
+
+
+      </select>
+
+     </div>
+
+      <div class="col-12 row mr-5">
+      <button  type="button" class="btn btn-primary mr-5" onclick="validart()">Actualizar</button>
+      <a href="/usuarios"><button type="button" class="btn btn-danger ">Cancelar</button></a>
+     </div>
+     </form>
+ </div>
+
+  </div>
+    <!-- ! Footer -->
+
+  </div>
+
+
+</div>
+
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+ <script src="sweetalert2.min.js"></script>
+ <link rel="stylesheet" href="sweetalert2.min.css">
+
+<!-- Chart library -->
+<script src="../wwwroot/plugins/chart.min.js"></script>
+<!-- Icons library -->
+<script src="../wwwroot/plugins/feather.min.js"></script>
+<!-- Custom scripts -->
+<script src="../wwwroot/js/script.js"></script>
+
+

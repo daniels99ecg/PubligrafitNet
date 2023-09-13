@@ -1,0 +1,68 @@
+﻿@model ProyectoPubligrafit.Models.Rol
+@{
+    ViewData["Title"] = "Crear";
+}
+  <link rel="stylesheet" href="../../css/style.css">
+
+<script src="../../validar/validarUR.js"></script>
+  <div class="main-wrapper">
+    
+
+  <div class="card">
+
+    <div class="card-body">
+   <form  asp-action="CreateA" method="POST" id="pruebas">
+    <div class="text-center">
+    <img class="img-fluid ml-5" src="https://cdn-icons-png.flaticon.com/512/359/359858.png" alt="">
+  </div>
+
+    <div class="form-row">
+
+      <div class="col-xs-4">
+        <label for="inputEmail4" class="form-label" >Nombre(*)</label>
+        <input type="text"  asp-for="nombre_rol" class="form-control" placeholder="Nombre" aria-label="First name" id="nombre">
+      </div>
+
+      <div class="col-xs-4">
+        <label for="inputEmail4" class="form-label">Descripcion(*)</label>
+        <input type="text" class="form-control" placeholder="Descripcion" aria-label="Last name" id="descripcion">
+      </div>
+
+      <div class="col-xs-4">
+        <label for="inputEmail4" class="form-label">Fecha(*)</label>
+        <input type="date"  asp-for="fecha" class="form-control" >
+      </div>
+
+
+    </div>
+<br>
+<br>
+    <th scope="col"><button type="button" onclick="ventana()" class="btn btn-info" style="margin-left: 45%; margin-top:-22%;">Asignar Permisos</button></th>
+     
+
+    <div class="col-12 row mr-5">
+      <button type="submit" class="btn btn-primary mr-5" onclick="validart()">Registrar</button>
+      <button type="button" class="btn btn-danger ">Cancelar</button>
+    </div>
+  </form>
+</div>
+  </div>
+
+    
+    
+  </div>
+</div>
+
+
+<script src="../wwwroot/plugins/chart.min"></script>
+
+<!-- Icons library -->
+<script src="../wwwroot/plugins/feather.min.js"></script>
+
+<script src="../wwwroot/plugins/feather.min.js"></script>
+
+<!-- Custom scripts -->
+<script src="../wwwroot/js/script.js"></script>
+
+
+

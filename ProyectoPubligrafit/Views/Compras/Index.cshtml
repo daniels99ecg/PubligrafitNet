@@ -1,0 +1,111 @@
+﻿@model IEnumerable<ProyectoPubligrafit.Models.Compras>
+<link rel="stylesheet" href="/css/style.css">
+<script src="/validar/validarCM.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+            <br>
+            <br>
+            <br>
+            <div style="margin-left: 63.7%;">
+                <form action="Search" method="get">
+                    <div class="input-group">
+
+                        <input type="text" placeholder="Buscar Id" name="id" id="id" style="border-radius:5px; border:none;">
+                        <input type="submit" class="btn btn-primary" value="Buscar" style="width: 20.8%;">
+
+                    </div>
+                    <br>
+                </form>
+            </div>
+            <div class="nr">
+                <a class="btn btn-primary ml-4" href="/Compras/createA" role="button">Nuevo Registro</a>
+            </div>
+            <div class="repo2">
+                <a class="btn btn-primary ml-4" id="reportar" onclick="Reportar()" href="reporte" role="button">Reporte</a>
+            </div>
+            <br>
+            <br>
+
+
+            <br>
+            <br>
+            <table class="table table-hover ml-3">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Proveedor</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Fecha de compra</th>
+                        <th scope="col">Total</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Detalle</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+       
+                     @foreach(var item in Model)
+                     {
+            <tr id="lista">
+                    <td>@item.id_compra</td>
+                    <td>@item.proveedor</td>
+                    <td>@item.cantidad</td>
+                    <td>@item.fecha</td>
+                    <td>@item.total</td>
+
+                <td>
+                    <div class="switch-button">
+                        <input type="checkbox" name="switch-button" id="switch-label-@item.id_compra" onclick="estado(@item.id_compra)" checked class="switch-button__checkbox">
+                        <label for="switch-label-@item.id_compra" class="switch-button__label"></label>
+                    </div>
+                </td>
+                        <td>
+                            <a class="btn btn-primary ml-4" onclick="detalle2(@item.id_compra)" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                </svg>
+                    </a>
+                </td>
+
+                    
+                    
+        </tr>
+        }
+                </tbody>
+            </table>
+
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+            <script src="sweetalert2.min.js"></script>
+            <link rel="stylesheet" href="sweetalert2.min.css">
+
+        </div>
+        <!-- ! Footer -->
+        <!-- <footer class="footer">
+          <div class="container footer--flex">
+            <div class="footer-start">
+              <p>2021 © Elegant Dashboard - <a href="elegant-dashboard.com" target="_blank"
+                  rel="noopener noreferrer">elegant-dashboard.com</a></p>
+            </div>
+            <ul class="footer-end">
+              <li><a href="##">About</a></li>
+              <li><a href="##">Support</a></li>
+              <li><a href="##">Puchase</a></li>
+            </ul>
+          </div>
+        </footer>
+          </div>
+        </div> -->
+        <!-- Chart library -->
+<script src="../wwwroot/plugins/chart.min"></script>
+
+<!-- Icons library -->
+<script src="../wwwroot/plugins/feather.min.js"></script>
+
+<script src="../wwwroot/plugins/feather.min.js"></script>
+
+<!-- Custom scripts -->
+<script src="../wwwroot/js/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+

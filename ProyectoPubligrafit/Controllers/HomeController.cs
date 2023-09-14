@@ -19,8 +19,9 @@ namespace ProyectoPubligrafit.Controllers
         }
 
 
-        public IActionResult Login() { 
-        return View();
+        public IActionResult Login()
+        {
+            return View();
         }
 
         [HttpPost]
@@ -33,32 +34,35 @@ namespace ProyectoPubligrafit.Controllers
                 if (usuario != null)
                 {
 
-                    var Claims = new List<Claim>
+                    if (!usuario.estado)
                     {
-                        new Claim(ClaimTypes.Email, usuario.email),
-                        new Claim("email", usuario.email)
-                    };
-
-                    var claimsIdentity = new ClaimsIdentity(Claims, CookieAuthenticationDefaults.AuthenticationScheme);
-                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
-
-                    return RedirectToAction("Index", "Usuario");
+                        return RedirectToAction("Index", "Usuario");
+                    }
+                    else
+                    {
+                        // El usuario tiene un estado "false," redirige a una página de no autorizado.
+                        return RedirectToAction("algo", "Usuario");
+                    }
                 }
-
+                else
+                {
+                    // Usuario no encontrado, redirige a una página de no autorizado.
+                    return RedirectToAction("NoLogin", "Home");
+                }
+            
 
                 return RedirectToAction("NoLogin", "Home");
 
                 //ModelState.AddModelError(string.Empty, "Credenciales inválidas.");
             }
+            else
+            {
+                return View(model);
+            }
 
-            return View(model);
+           
         }
-        public async Task<IActionResult> Salir()
-        {
-            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            return RedirectToAction("Index", "Home");
-        }
-
+      
         //public IActionResult LoginA(Usuario model)
         //{
         //    if (ModelState.IsValid)

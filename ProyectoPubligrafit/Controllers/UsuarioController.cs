@@ -20,28 +20,21 @@ namespace ProyectoPubligrafit.Controllers
         {
             _context = context;
         }
-
         public IActionResult Index()
         {
-            // Verifica si el usuario está autenticado antes de permitir el acceso a esta página
-            if (!User.Identity.IsAuthenticated)
-            {
-                // Si el usuario no está autenticado, redirige a la página de inicio de sesión
-                return RedirectToAction("Login", "Home");
-            }
-
-            // Si el usuario está autenticado, continúa con la lógica de la página principal
+            
             return View();
+
+
         }
-        //public IActionResult Index()
-        //{
 
-        //    return View();
+        public IActionResult Algo()
+        {
+
+            return View();
 
 
-
-        //}
-
+        }
         public ActionResult Listar()
         {
 

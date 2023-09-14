@@ -15,7 +15,7 @@ function inicializarEstados() {
         const estadoGuardado = localStorage.getItem('switchEstado-' + id);
         if (estadoGuardado !== null) {
             // Si hay un estado guardado en el localStorage, establecer el estado del interruptor
-            switchElement.checked = estadoGuardado === 'false'; // Convierte el valor de cadena en un booleano
+            switchElement.checked = estadoGuardado === "false"; // Convierte el valor de cadena en un booleano
         }
 
 

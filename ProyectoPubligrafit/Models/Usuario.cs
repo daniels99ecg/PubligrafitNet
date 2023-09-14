@@ -14,7 +14,7 @@ namespace ProyectoPubligrafit.Models
         public string? apellidos { get; set; }
         public string? email { get; set; }
         public string? contrasena { get; set; }
-        public bool? estado { get; set; }
+        public bool estado { get; set; }
 
         //public virtual Rol? rol { get; set; }
 

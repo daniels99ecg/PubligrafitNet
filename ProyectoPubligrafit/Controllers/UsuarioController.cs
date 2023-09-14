@@ -35,6 +35,47 @@ namespace ProyectoPubligrafit.Controllers
 
 
         }
+
+        public async Task<IActionResult> LoginA(Usuario model)
+        {
+            if (ModelState.IsValid)
+            {
+                var usuario = _context.Usuario.SingleOrDefault(u => u.email == model.email && u.contrasena == model.contrasena);
+                if (usuario != null)
+                {
+
+                    if (!usuario.estado)
+                    {
+                        return RedirectToAction("Index", "Usuario");
+                    }
+                    else
+                    {
+                        // El usuario tiene un estado "false," redirige a una página de no autorizado.
+                        return RedirectToAction("algo", "Usuario");
+                    }
+                }
+                else
+                {
+                    // Usuario no encontrado, redirige a una página de no autorizado.
+                    return RedirectToAction("NoLogin", "Home");
+                }
+
+
+                return RedirectToAction("NoLogin", "Home");
+
+                //ModelState.AddModelError(string.Empty, "Credenciales inválidas.");
+            }
+            else
+            {
+                return View(model);
+            }
+
+
+        }
+
+
+
+
         public ActionResult Listar()
         {
 

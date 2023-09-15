@@ -1,6 +1,8 @@
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using ProyectoPubligrafit.Data;
+using Microsoft.AspNetCore.Authentication.Cookies;
+
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +12,15 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Conexion")));
+
+
+
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(option => {
+        option.LoginPath = "/Home/Login";
+        option.ExpireTimeSpan = TimeSpan.FromMinutes(20);
+        option.AccessDeniedPath = "/Home/Privacy";
+    });
 
 
 var app = builder.Build();
@@ -28,7 +39,11 @@ app.UseStaticFiles();
 app.UseRouting();
 
 
- app.UseAuthentication();
+app.UseAuthentication();
+
+app.UseAuthorization();
+
+
 
 app.MapControllerRoute(
     name: "default",

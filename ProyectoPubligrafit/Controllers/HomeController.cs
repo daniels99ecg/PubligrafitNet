@@ -1,17 +1,24 @@
-﻿using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProyectoPubligrafit.Data;
 using ProyectoPubligrafit.Models;
 using System.Diagnostics;
+
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
 using System.Security.Claims;
+
+
+
 
 namespace ProyectoPubligrafit.Controllers
 {
     public class HomeController : Controller
     {
         public readonly ApplicationDbContext _context;
+
+        public object FormsAuthentication { get; private set; }
+
         //Creamos el contructor
         public HomeController(ApplicationDbContext context)
         {
@@ -21,7 +28,8 @@ namespace ProyectoPubligrafit.Controllers
 
         public IActionResult Login()
         {
-            return View();
+            
+            return View();  
         }
 
         [HttpPost]
@@ -34,8 +42,22 @@ namespace ProyectoPubligrafit.Controllers
                 if (usuario != null)
                 {
 
+                    var Claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Email, usuario.email),
+                    new Claim("email", usuario.email)
+
+                };
+                    var claimsIndentity = new ClaimsIdentity(Claims, CookieAuthenticationDefaults.AuthenticationScheme);
+
+
+                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIndentity));
+
+
+
                     if (!usuario.estado)
                     {
+
                         return RedirectToAction("Index", "Usuario");
                     }
                     else
@@ -47,11 +69,11 @@ namespace ProyectoPubligrafit.Controllers
                 else
                 {
                     // Usuario no encontrado, redirige a una página de no autorizado.
-                    return RedirectToAction("NoLogin", "Home");
+                    return RedirectToAction("Incorrecto", "Usuario");
                 }
             
 
-                return RedirectToAction("NoLogin", "Home");
+                return RedirectToAction("Incorrecto", "Usuario");
 
                 //ModelState.AddModelError(string.Empty, "Credenciales inválidas.");
             }
@@ -62,7 +84,7 @@ namespace ProyectoPubligrafit.Controllers
 
            
         }
-      
+
         //public IActionResult LoginA(Usuario model)
         //{
         //    if (ModelState.IsValid)
@@ -83,7 +105,11 @@ namespace ProyectoPubligrafit.Controllers
 
         //    return View(model);
         //}
-
+        public async Task<IActionResult> Salir()
+        {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return RedirectToAction("Login", "Home");
+        }
 
         public IActionResult NoLogin()
         {

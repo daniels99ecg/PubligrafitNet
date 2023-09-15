@@ -5,16 +5,19 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using ProyectoPubligrafit.Data;
 using ProyectoPubligrafit.Models;
 using System.Collections.Generic;
-using Microsoft.AspNetCore.Authorization;
+
 using System.Data;
 
-namespace ProyectoPubligrafit.Controllers
-{
-    //[Authorize]
-    public class UsuarioController : Controller
-    {
+using Microsoft.AspNetCore.Authorization;
 
-        public readonly ApplicationDbContext _context;
+
+[Authorize]
+
+public class UsuarioController : Controller
+    {
+    
+
+    public readonly ApplicationDbContext _context;
         //Creamos el contructor
         public UsuarioController(ApplicationDbContext context)
         {
@@ -36,13 +39,24 @@ namespace ProyectoPubligrafit.Controllers
 
         }
 
-        public async Task<IActionResult> LoginA(Usuario model)
+
+    public IActionResult Incorrecto()
+    {
+
+        return View();
+
+
+    }
+
+    public async Task<IActionResult> LoginA(Usuario model)
         {
             if (ModelState.IsValid)
             {
                 var usuario = _context.Usuario.SingleOrDefault(u => u.email == model.email && u.contrasena == model.contrasena);
                 if (usuario != null)
                 {
+
+               
 
                     if (!usuario.estado)
                     {
@@ -217,4 +231,4 @@ namespace ProyectoPubligrafit.Controllers
         }
 
     }
-}
+

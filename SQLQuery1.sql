@@ -1,3 +1,5 @@
+create table Publigrafit
+
 use Publigrafit;
 
 CREATE TABLE usuario (
@@ -7,6 +9,7 @@ CREATE TABLE usuario (
   apellidos varchar(50) NOT NULL,
   email varchar(40) NOT NULL,
   contrasena varchar(20) NOT NULL,
+	estado bit not null
 
 ) 
 
@@ -55,7 +58,9 @@ id_compra int identity (1,1) PRIMARY KEY not null,
     proveedor varchar (50) not null,
     cantidad int not null,
     fecha date not null,
-    total float (10)
+    total float (10),
+	estado bit not null
+
 );
 
 create table detalle_compra(
@@ -65,7 +70,8 @@ id_detalle_compra int identity (1,1) PRIMARY KEY not null,
     cantidad int not null,
     precio float (10) not null,
     iva float (5) not null,
-    subtotal float (10) not null
+    subtotal float (10) not null,
+
 );
 
 create table insumos(
@@ -73,6 +79,8 @@ id_insumo int identity (1,1) PRIMARY KEY not null,
     nombre varchar (50) not null,
     precio float (10) not null,
     cantidad int not null,
+		estado bit not null
+
 );
 
 
@@ -88,7 +96,9 @@ id_ft int identity (1,1) PRIMARY KEY not null,
     costo_insumo float (10) not null,
     imagen_producto_final image not null,
     costo_final_producto float (10) not null,
-    detalle varchar (255) not null
+    detalle varchar (255) not null,
+		estado bit not null
+
 );
 
 ALTER TABLE ficha_tecnica

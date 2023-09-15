@@ -1,0 +1,69 @@
+﻿@model ProyectoPubligrafit.Models.Usuario
+
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../img/PubliGrafit2.png" type="image/x-icon">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="/css/style.min.css">
+    <script src="/validar/login.js"></script>
+</head>
+
+<body>
+
+
+    <div class="layer"></div>
+    <main class="page-center">
+        <img src="../img/PubliGrafit.png" style="width: 20%;">
+        <article class="sign-up">
+
+
+
+            <form asp-action="loginA" method="post" id="pruebas">
+                <div class="sign-up-form form">
+                    <label class="form-label-wrapper">
+                        <p class="form-label">Correo Electronico </p>
+                        <input class="form-input" asp-for="email" type="text" placeholder="Enter your email" id="correo">
+                    </label>
+                    <label class="form-label-wrapper">
+                        <p class="form-label">Contraseña</p>
+                        <input class="form-input" asp-for="contrasena" type="password" placeholder="Enter your password" id="contrasena">
+                    </label>
+
+                    <a class="link-info forget-link" href="##">Recuperar Contraseña</a>
+                    <label class="form-label-wrapper" style="color:red;">La contraseña o el correo es incorrecto</label>
+                    <label class="form-checkbox-wrapper">
+                        <input class="form-checkbox" type="checkbox" required>
+                        <span class="form-checkbox-label">Remember me next time</span>
+                    </label>
+                    <button class="form-btn primary-default-btn transparent-btn" type="button" onclick="ingreso()">Iniciar sesión</button>
+            </form>
+            </div>
+        </article>
+    </main>
+    <!-- Chart library -->
+    <script src="./plugins/chart.min.js"></script>
+    <!-- Icons library -->
+    <script src="plugins/feather.min.js"></script>
+    <!-- Custom scripts -->
+    <script src="js/script.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
+
+</body>
+
+</html>

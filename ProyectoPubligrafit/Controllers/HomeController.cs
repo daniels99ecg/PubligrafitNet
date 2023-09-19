@@ -7,12 +7,14 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;
 using System.Security.Claims;
-
+using Microsoft.AspNetCore.Authorization;
 
 
 
 namespace ProyectoPubligrafit.Controllers
 {
+
+  
     public class HomeController : Controller
     {
         public readonly ApplicationDbContext _context;

@@ -11,13 +11,15 @@ using System.Data;
 using Microsoft.AspNetCore.Authorization;
 
 
-[Authorize]
+namespace ProyectoPubligrafit.Controllers
+{
+    [Authorize]
 
-public class UsuarioController : Controller
+    public class UsuarioController : Controller
     {
-    
 
-    public readonly ApplicationDbContext _context;
+
+        public readonly ApplicationDbContext _context;
         //Creamos el contructor
         public UsuarioController(ApplicationDbContext context)
         {
@@ -25,7 +27,7 @@ public class UsuarioController : Controller
         }
         public IActionResult Index()
         {
-            
+
             return View();
 
 
@@ -40,15 +42,15 @@ public class UsuarioController : Controller
         }
 
 
-    public IActionResult Incorrecto()
-    {
+        public IActionResult Incorrecto()
+        {
 
-        return View();
+            return View();
 
 
-    }
+        }
 
-    public async Task<IActionResult> LoginA(Usuario model)
+        public async Task<IActionResult> LoginA(Usuario model)
         {
             if (ModelState.IsValid)
             {
@@ -56,7 +58,7 @@ public class UsuarioController : Controller
                 if (usuario != null)
                 {
 
-               
+
 
                     if (!usuario.estado)
                     {
@@ -110,9 +112,9 @@ public class UsuarioController : Controller
             //return View(resul);
 
 
-        //Creamos lista
-        IEnumerable<Usuario> Listusuario = _context.Usuario;
-         return View(Listusuario);
+            //Creamos lista
+            IEnumerable<Usuario> Listusuario = _context.Usuario;
+            return View(Listusuario);
 
         }
 
@@ -146,10 +148,10 @@ public class UsuarioController : Controller
         {
 
 
-        
+
             IEnumerable<Rol> ListRol = _context.Rol;
             return View(ListRol);
-            
+
         }
 
         [HttpPost]
@@ -231,4 +233,5 @@ public class UsuarioController : Controller
         }
 
     }
+}
 

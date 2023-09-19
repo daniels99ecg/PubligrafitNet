@@ -4,10 +4,15 @@ using Microsoft.EntityFrameworkCore;
 using ProyectoPubligrafit.Data;
 using ProyectoPubligrafit.Models;
 using System.Linq;
+using Microsoft.AspNetCore.Authorization;
+
+
+
 
 
 namespace ProyectoPubligrafit.Controllers
 {
+    [Authorize]
     public class ClienteController : Controller
     {
         private readonly ApplicationDbContext _context;

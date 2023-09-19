@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ProyectoPubligrafit.Data;
 using ProyectoPubligrafit.Models;
 
 namespace ProyectoPubligrafit.Controllers
 {
+    [Authorize]
     public class InsumosController : Controller
     {
         // GET: InsumosController

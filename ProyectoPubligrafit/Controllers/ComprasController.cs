@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using ProyectoPubligrafit.Data;
 using ProyectoPubligrafit.Models;
 
 namespace ProyectoPubligrafit.Controllers
 {
+    [Authorize]
     public class ComprasController : Controller
     {
         public readonly ApplicationDbContext _context;
